@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="dian">
+      <h1>Program Horoskop</h1>
+      <button onclick="tombol1()">Click Here!</button>
+      <hr />
+    </div>
+
+    <script>
+      const garis = document.getElementsByTagName('hr')[0];
+
+      const pBaru = document.createElement('p');
+      pBaru.innerHTML = 'Keberuntungan Anda hari ini adalah:';
+
+      dian.insertBefore(pBaru, garis);
+
+      function tombol1() {
+        let angkaRandom = Date.now();
+        let angkaTerakhir = angkaRandom.toString().substr(-1);
+
+        let untung1 = document.createElement('p');
+        dian.appendChild(untung1);
+
+        if (angkaTerakhir < 3) {
+          untung1.innerHTML = 'Hebat!';
+        } else if (angkaTerakhir >= 3 && angkaTerakhir < 8) {
+          untung1.innerHTML = 'Boleh juga!';
+        } else {
+          untung1.innerHTML = 'Mengerikan!';
+        }
+      }
+    </script>
+  </body>
+</html>
